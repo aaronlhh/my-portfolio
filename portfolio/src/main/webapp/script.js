@@ -17,12 +17,13 @@
  */
 function addRandomGreeting() {
   const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
+      ['Big Bang Theories', 'Avengers', 'Star Wars', 'Harry Potter'];
 
   // Pick a random greeting.
   const greeting = greetings[Math.floor(Math.random() * greetings.length)];
 
   // Add it to the page.
   const greetingContainer = document.getElementById('greeting-container');
+  console.log(greeting);
   greetingContainer.innerText = greeting;
 }
