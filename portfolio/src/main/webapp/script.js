@@ -16,14 +16,26 @@
  * Adds a random greeting to the page.
  */
 function addRandomGreeting() {
-  const greetings =
-      ['Big Bang Theories', 'Avengers', 'Star Wars', 'Harry Potter'];
+    const greetings =
+        ['Big Bang Theories', 'Avengers', 'Star Wars', 'Harry Potter'];
 
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+    // Pick a random greeting.
+    const greeting = greetings[Math.floor(Math.random() * greetings.length)];
 
-  // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  console.log(greeting);
-  greetingContainer.innerText = greeting;
+    // Add it to the page.
+    const greetingContainer = document.getElementById('greeting-container');
+    console.log(greeting);
+    greetingContainer.innerText = greeting;
+}
+
+
+/*
+* Try fetch /hello server
+*/
+async function sayHello(){
+    const responseFromServer = await fetch("/hello");
+    const textFromResponse = await responseFromServer.text();
+
+    const greeting = document.getElementById("hello");
+    greeting.innerText = textFromResponse;
 }
