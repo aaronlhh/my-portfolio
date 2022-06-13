@@ -13,29 +13,29 @@
 // limitations under the License.
 
 /**
- * Adds a random greeting to the page.
+ * Adds a random movie to the page.
  */
-function addRandomGreeting() {
-    const greetings =
-        ['Big Bang Theories', 'Avengers', 'Star Wars', 'Harry Potter'];
+async function addRandomMovie() {
+    const responseFromServer = await fetch("/movie");
+    const moviesFromResponse = await responseFromServer.json();
 
-    // Pick a random greeting.
-    const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+    // Pick a random movie.
+    const movie = moviesFromResponse[Math.floor(Math.random() * Object.keys(moviesFromResponse).length)];
 
     // Add it to the page.
-    const greetingContainer = document.getElementById('greeting-container');
-    console.log(greeting);
-    greetingContainer.innerText = greeting;
+    const movieContainer = document.getElementById('movie-container');
+    console.log(movie);
+    movieContainer.innerText = movie;
 }
 
 
 /*
 * Try fetch /hello server
 */
-async function sayHello(){
-    const responseFromServer = await fetch("/hello");
-    const textFromResponse = await responseFromServer.text();
+// async function sayHello(){
+//     const responseFromServer = await fetch("/hello");
+//     const textFromResponse = await responseFromServer.text();
 
-    const greeting = document.getElementById("hello");
-    greeting.innerText = textFromResponse;
-}
+//     const greeting = document.getElementById("hello");
+//     greeting.innerText = textFromResponse;
+// }
