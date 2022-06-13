@@ -36,13 +36,16 @@
             <p>Activities: Badminton Team, Computer Science Club officer, Multiple Hackathons Competitions</p>
         </div>
 
-        <div id="greeting-container">
-            <button onclick="addRandomGreeting()">Favorite TV Shows / Movies</button>
+        <div id="movie-container">
+            <button onclick="addRandomMovie()">Favorite TV Shows / Movies</button>
         </div>
-
-        <button onclick="sayHello()">Say Hello</button>
-        <p id="hello"></p>
         
+        <form action="/form-handler" method="POST">
+            <p>Enter some text here:</p>
+            <textarea name="text-input">hello world</textarea>
+            <br/>
+            <input type="submit" />
+        </form>
     </div>
   </body>
 </html>
