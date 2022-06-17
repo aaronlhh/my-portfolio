@@ -39,3 +39,16 @@ async function addRandomMovie() {
 //     const greeting = document.getElementById("hello");
 //     greeting.innerText = textFromResponse;
 // }
+
+
+// scroll up functionality
+
+function ScrollUpClicked() {
+    const scrollUp = document.querySelector("scroll-up");
+
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+    });
+}

@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Aaron's Resume</title>
+    <title>Aaron's Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
@@ -157,11 +157,90 @@
         </div>
     </section>
     <!-- Contact Section -->
-
+    <section class="contact" id="contact">
+        <h2>Get In Touch With Me</h2>
+        <div class="contact-form-container">
+            <div class="contact-form">
+                <form action="/form-handler" method="POST">
+                    <div class="form-control">
+                        <label for="name">Name</label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="sender-name" 
+                            placeholder="Enter Your Name" 
+                            class="input-field" 
+                            required
+                        />
+                    </div>
+                    <div class="form-control">
+                        <label for="email">Email</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="sender-email" 
+                            placeholder="Enter Your Email" 
+                            class="input-field" 
+                            required
+                        />
+                    </div>
+                    <div class="form-control">
+                        <label for="message">Message</label>
+                        <textarea 
+                            id="message" 
+                            cols="60"
+                            rows="10"
+                            placeholder="Enter Your Message"
+                            name="message"
+                            class="input-field"
+                            required
+                        ></textarea>
+                    </div>
+                    <input 
+                        type="submit"
+                        value="Submit"
+                        id="submit-btn"
+                        class="submit-btn"
+                    />
+                </form>
+            </div>
+        </div>
+    </section>
     <!-- Social Accounts - fixed to the right-->
-
+    <div class="socials">
+        <a href="#" target="_blank">
+            <img 
+                src="/images/icons8-linkedin-circled.gif" 
+                alt="linkedin-icon"
+                loading="lazy"
+                class="social-icon"
+            />
+        </a>
+        <a href="#" target="_blank">
+            <img 
+                src="/images/icons8-github.gif" 
+                alt="github-icon"
+                loading="lazy"
+                class="social-icon"
+            />
+        </a>
+        <a href="#" target="_blank">
+            <img 
+                src="/images/icons8-gmail-logo.gif" 
+                alt="gmail-icon"
+                loading="lazy"
+                class="social-icon"
+            />
+        </a>
+    </div>
     <!-- Scroll to top -->
-
+    <i class="scroll-up" id="scroll-up" onclick="ScrollUpClicked()">
+        <img 
+            src="/images/icons8-scroll-up.gif" 
+            alt="scroll-up"
+            class="scroll-up-arrow"   
+        />
+    </i>
     <!-- Website Scripts -->
 
     <!-- Ion icons scripts -->
