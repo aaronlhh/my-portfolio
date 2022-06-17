@@ -42,9 +42,8 @@ async function addRandomMovie() {
 
 
 // scroll up functionality
-
 function ScrollUpClicked() {
-    const scrollUp = document.querySelector("scroll-up");
+    const scrollUp = document.getElementById("scroll-up");
 
     window.scrollTo({
         top: 0,
@@ -52,3 +51,22 @@ function ScrollUpClicked() {
         behavior: "smooth",
     });
 }
+
+
+// Navbar Menu 
+function menuToggled() {
+    const menu = document.getElementById("menu");
+    const ul = document.querySelector("nav ul");
+    const nav = document.querySelector("nav");
+
+    ul.classList.toggle("show");
+
+    const navLink = document.querySelectorAll(".nav-link");
+    navLink.forEach((link) => 
+        link.addEventListener("click", ()=> {
+            ul.classList.remove("show");
+        })
+    );
+}
+
+
