@@ -26,6 +26,7 @@ public class FormHandlerServlet extends HttpServlet {
         String name = Jsoup.clean(request.getParameter("sender-name"), Whitelist.none());
         String email = Jsoup.clean(request.getParameter("sender-email"), Whitelist.none());
         String message = Jsoup.clean(request.getParameter("message"), Whitelist.none());
+        long timestamp = System.currentTimeMillis();
         // String name = request.getParameter("sender-name");
         // String email = request.getParameter("sender-email");
         // String message = request.getParameter("message");
@@ -38,9 +39,10 @@ public class FormHandlerServlet extends HttpServlet {
                 .set("sender-name", name)
                 .set("sender-email", email)
                 .set("sender-message", message)
+                .set("timestamp", timestamp)
                 .build();
         datastore.put(taskEntity);
 
-        response.sendRedirect("/index.html");
+        response.sendRedirect("/");
     }
 }
