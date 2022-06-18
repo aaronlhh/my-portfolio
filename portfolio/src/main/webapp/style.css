@@ -124,6 +124,12 @@ nav ul li{
     width: 37.5rem;
 }
 
+.desc {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
 .bio {
     width: 25rem;
     padding: 0.625rem;
@@ -139,6 +145,28 @@ nav ul li{
     line-height: var(--line-height);
     padding: 0.3rem 0;
 }
+
+.download {
+    display: flex;
+    max-width: 25rem;
+    justify-content: space-between;
+}
+
+.link {
+    padding: 0.625rem;
+    border: solid;
+    text-align: center;
+    border-radius: 6px;
+    width: 12rem;
+    box-shadow: 0px 20x 15px 2px var(--secondary-shadow);
+}
+
+.link:hover {
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    cursor: pointer;
+}
+
 /* Hero section end */
 
 
