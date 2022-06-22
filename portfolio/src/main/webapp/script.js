@@ -15,18 +15,18 @@
 /**
  * Adds a random movie to the page.
  */
-async function addRandomMovie() {
-    const responseFromServer = await fetch("/movie");
-    const moviesFromResponse = await responseFromServer.json();
+// async function addRandomMovie() {
+//     const responseFromServer = await fetch("/movie");
+//     const moviesFromResponse = await responseFromServer.json();
 
-    // Pick a random movie.
-    const movie = moviesFromResponse[Math.floor(Math.random() * Object.keys(moviesFromResponse).length)];
+//     // Pick a random movie.
+//     const movie = moviesFromResponse[Math.floor(Math.random() * Object.keys(moviesFromResponse).length)];
 
-    // Add it to the page.
-    const movieContainer = document.getElementById('movie-container');
-    console.log(movie);
-    movieContainer.innerText = movie;
-}
+//     // Add it to the page.
+//     const movieContainer = document.getElementById('movie-container');
+//     console.log(movie);
+//     movieContainer.innerText = movie;
+// }
 
 
 /*
@@ -42,9 +42,8 @@ async function addRandomMovie() {
 
 
 // scroll up functionality
-
 function ScrollUpClicked() {
-    const scrollUp = document.querySelector("scroll-up");
+    const scrollUp = document.getElementById("scroll-up");
 
     window.scrollTo({
         top: 0,
@@ -52,3 +51,22 @@ function ScrollUpClicked() {
         behavior: "smooth",
     });
 }
+
+
+// Navbar Menu 
+function menuToggled() {
+    const menu = document.getElementById("menu");
+    const ul = document.querySelector("nav ul");
+    const nav = document.querySelector("nav");
+
+    ul.classList.toggle("show");
+
+    const navLink = document.querySelectorAll(".nav-link");
+    navLink.forEach((link) => 
+        link.addEventListener("click", ()=> {
+            ul.classList.remove("show");
+        })
+    );
+}
+
+

@@ -124,6 +124,12 @@ nav ul li{
     width: 37.5rem;
 }
 
+.desc {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
 .bio {
     width: 25rem;
     padding: 0.625rem;
@@ -139,6 +145,28 @@ nav ul li{
     line-height: var(--line-height);
     padding: 0.3rem 0;
 }
+
+.download {
+    display: flex;
+    max-width: 25rem;
+    justify-content: space-between;
+}
+
+.link {
+    padding: 0.625rem;
+    border: solid;
+    text-align: center;
+    border-radius: 6px;
+    width: 12rem;
+    box-shadow: 0px 20x 15px 2px var(--secondary-shadow);
+}
+
+.link:hover {
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    cursor: pointer;
+}
+
 /* Hero section end */
 
 
@@ -156,8 +184,8 @@ nav ul li{
 
 .skills-wrapper img {
     padding: 1.25rem;
-    width: 11.875rem;
-    height: 11.25rem;
+    width: 10.25rem;
+    height: 9.5rem;
 }
 
 .icon-card {
@@ -313,4 +341,89 @@ nav ul li{
 .scroll-up-arrow {
     width: 3rem;
     height: 3rem;
+}
+/* scroll up end */
+
+
+/* responsive with different device using menu*/
+@media screen and (max-width: 720px){
+    nav {
+        padding: 1.5rem;
+    }
+    
+    nav ul {
+        position: fixed;
+        background-color: var(--bg-color);
+        flex-direction: column;
+        top: 86px;
+        left: 10%;
+        width: 80%;
+        text-align: center;
+        transform: translateX(120%);
+        transition: transform 0.5s ease-in;
+    }
+
+    nav ul li {
+        margin: 8px;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    nav ul.show {
+        transform: translateX(0);
+    }
+
+    .hero {
+        margin-top: -4rem;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .hero img {
+        height: 30rem;
+        width: 30rem;
+    }
+
+    .bio {
+        margin-top: -3rem;
+        width: 20.5rem;
+    }
+
+    .skills-wrapper img {
+        width: 6.0rem;
+        height: 6.0rem;
+    }
+
+    .projects-container {
+        flex-direction: column;
+    }
+
+    .project-container {
+        width: 20.875rem;
+    }
+
+    .contact-form-container {
+        max-width: 23.75rem;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .hero img {
+        height: 23rem;
+        width: 23rem;
+    }
+
+    .bio {
+        width: 18.3rem;
+    }
+
+    .project-container {
+        width: 17.875rem;
+    }
+
+    .contact-form-container {
+        max-width: 17.75rem;
+    }
 }
